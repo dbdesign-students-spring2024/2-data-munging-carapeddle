@@ -33,7 +33,7 @@ You must write a Python program in the file named `munge.py` to clean up the raw
 - You are not allowed to use any data munging or anlysis modules such as `pandas` or `csv` for munging.  You must write the code using plain Python.
 
 Issues your program must address:
-- there are many lines at the top and bottom of the file that contain notes and not the raw data - **all lines with notes must be removed**.
+- there are many lines at the top and bottom of the file that contain notes and not the raw data - **all lines with notes must be removed**. dont do this by skipping 7  lines do it by doing thru each line and  if starts with year jan begin analysis
 - the column headings are repeated on multiple lines throughout the file - **remove all but the first line of column headings**.
 - there are some blank lines in the middle of the data - **remove all blank lines**.
 - there is missing data indicated with `***` - figure out how to **handle missing data so that your analyses are correct**.
