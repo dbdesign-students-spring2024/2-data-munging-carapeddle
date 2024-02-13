@@ -142,6 +142,3 @@ avg_anom13 = statistics.mean(count13)
 print(f'2010 to 2019: {avg_anom13}')
 avg_anom14 = statistics.mean(count14)
 print(f'+2020: {avg_anom14}')
-
-# and so on.
-# You are allowed to use the `csv` module to help parse your CSV data file in the analysis
