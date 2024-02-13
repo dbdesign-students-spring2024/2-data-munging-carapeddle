@@ -5,6 +5,35 @@ import csv
 import statistics
 raw_data = open('data/clean_data.csv', 'r', encoding='utf_8')
 csv_reader = csv.DictReader(raw_data)
+total_decades = []
+for line in csv_reader:
+    year = int(line['Year'])
+    # no *
+    if '.' in line ['J-D']:
+        anomaly = float(line['J-D'])
+    decadenum = (year - 1880) // 10
+    #ex: (2000-1880)//10 = 12 & (2005-1880)//10 = 12
+    #ex: (1892-1880)//10 = 1 & (1899-1880)//10 = 1 BUT (1900-1880)//10 = 2
+    # 15 decades from 1880 to 2024
+    if decadenum < 15 and decadenum >= 0:
+        while len(total_decades) <= decadenum:
+            total_decades.append([])
+        # add anomaly to list at index
+        total_decades[decadenum] += [anomaly]
+# for each decadenum in the range of the total decades list
+for decadenum in range(len(total_decades)):
+    # calculate first year in decade
+    firstyear = 1880 + decadenum * 10
+    # calculate last year in decade
+    lastyear = firstyear + 9
+    # each decade will be the list of numbers at each decadenum
+    decade = total_decades[decadenum]
+    # find the mean of the list of numbers for the current decade 
+    average_anomaly = statistics.mean(decade)
+    print(f'{firstyear} to {lastyear}: {average_anomaly}')
+
+# manually:
+'''
 count0 = []
 count1=[]
 count2=[]
@@ -113,3 +142,4 @@ avg_anom13 = statistics.mean(count13)
 print(f'2010 to 2019: {avg_anom13}')
 avg_anom14 = statistics.mean(count14)
 print(f'+2020: {avg_anom14}')
+'''
