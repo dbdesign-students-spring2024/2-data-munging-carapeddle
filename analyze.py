@@ -26,92 +26,63 @@ for line in csv_reader:
     if int(line['Year']) <= 1889:
         if '.' in line['J-D']:
             count0 += [float(line['J-D'])]
-        if '.' in line['D-N']:
-            count0 += [float(line['D-N'])]
     # 1890 to 1899
     elif int(line['Year']) <= 1899 and int(line['Year']) >= 1890:
         if '.' in line['J-D']:
             count1 += [float(line['J-D'])]
-        if '.' in line['D-N']:
-            count1 += [float(line['D-N'])]
     # 1900 to 1909
     elif int(line['Year']) <= 1909 and int(line['Year']) >= 1900:
-        if '.' in line['J-D']:
+        if '.' in line['J-D']:            
             count2 += [float(line['J-D'])]
-        if '.' in line['D-N']:
-            count2 += [float(line['D-N'])]
     # 1910 to 1919
     elif int(line['Year']) <= 1919 and int(line['Year']) >= 1910:
         if '.' in line['J-D']:
             count3 += [float(line['J-D'])]
-        if '.' in line['D-N']:
-            count3 += [float(line['D-N'])]
     # 1920 to 1929
     elif int(line['Year']) <= 1929 and int(line['Year']) >= 1920:
         if '.' in line['J-D']:
-            count4 += [float(line['J-D'])]
-        if '.' in line['D-N']:
-            count4 += [float(line['D-N'])]
+            count4 += [float(line['J-D'])] 
     # 1930 to 1939
     elif int(line['Year']) <= 1939 and int(line['Year']) >= 1930:
         if '.' in line['J-D']:
             count5 += [float(line['J-D'])]
-        if '.' in line['D-N']:
-            count5 += [float(line['D-N'])]
     # 1940 to 1949
     elif int(line['Year']) <= 1949 and int(line['Year']) >= 1940:
         if '.' in line['J-D']:
             count6 += [float(line['J-D'])]
-        if '.' in line['D-N']:
-            count6 += [float(line['D-N'])]
     # 1950 to 1959
     elif int(line['Year']) <= 1959 and int(line['Year']) >= 1950:
         if '.' in line['J-D']:
             count7 += [float(line['J-D'])]
-        if '.' in line['D-N']:
-            count7 += [float(line['D-N'])]
     # 1960 to 1969
     elif int(line['Year']) <= 1969 and int(line['Year']) >= 1960:
         if '.' in line['J-D']:
             count8 += [float(line['J-D'])]
-        if '.' in line['D-N']:
-            count8 += [float(line['D-N'])]
     # 1970 to 1979
     elif int(line['Year']) <= 1979 and int(line['Year']) >= 1970:
         if '.' in line['J-D']:
             count9 += [float(line['J-D'])]
-        if '.' in line['D-N']:
-            count9 += [float(line['D-N'])]
     # 1980 to 1989
     elif int(line['Year']) <= 1989 and int(line['Year']) >= 1980:
         if '.' in line['J-D']:
             count10 += [float(line['J-D'])]
-        if '.' in line['D-N']:
-            count10 += [float(line['D-N'])]
     # 1990 to 1999
     elif int(line['Year']) <= 1999 and int(line['Year']) >= 1990:
         if '.' in line['J-D']:
             count11 += [float(line['J-D'])]
-        if '.' in line['D-N']:
-            count11 += [float(line['D-N'])]
     # 2000 to 2009
     elif int(line['Year']) <= 2009 and int(line['Year']) >= 2000:
         if '.' in line['J-D']:
             count12 += [float(line['J-D'])]
-        if '.' in line['D-N']:
-            count12 += [float(line['D-N'])]
     # 2010 to 2019
     elif int(line['Year']) <= 2019 and int(line['Year']) >= 2010:
         if '.' in line['J-D']:
             count13 += [float(line['J-D'])]
-        if '.' in line['D-N']:
-            count13 += [float(line['D-N'])]
     # 2020+
     elif int(line['Year']) >= 2020:
         if '.' in line['J-D']:
             count14 += [float(line['J-D'])]
-        if '.' in line['D-N']:
-            count14 += [float(line['D-N'])]
+  
 avg_anom0 = statistics.mean(count0)
 print(f'1880 to 1889: {avg_anom0}')
 avg_anom1 = statistics.mean(count1)
